@@ -19,7 +19,7 @@ Todos os caminhos de arquivos são relativos, compatíveis com as duas opções.
 
 ## Conteúdo e contato
 
-Os cinco projetos abrem em uma nova aba. Os cartões apresentam composições visuais com imagens dos respectivos projetos, e não capturas de tela exatas.
+Os seis projetos abrem em uma nova aba. Os cartões apresentam composições visuais com imagens dos respectivos projetos, e não capturas de tela exatas.
 
 WhatsApp: **+55 34 99107-7749**. Mensagem preenchida: **Oi, Sofia! Adorei seu trabalho e gostaria de encomendar um site com você. Podemos conversar sobre a minha ideia?**. O visitante decide quando enviar a mensagem no WhatsApp.
 
@@ -28,3 +28,5 @@ Para editar textos e links, altere `index.html`. Para mudar as cores, edite as v
 As imagens dos projetos foram obtidas dos sites fornecidos. A ilustração floral do projeto Flora & Terra foi preservada em SVG; a flor rosa da identidade do portfólio é uma ilustração vetorial criada para este site.
 
 Atualização: tipografia ampliada, maior contraste, botões de contato e agendamento destacados e borboletas vetoriais com detalhes nas asas. A opção Agendar da prévia abre a seção de agendamento do projeto Élan Nail Atelier.
+
+O sexto projeto é a Doçura Delícia, disponível em https://sofiatresse.github.io/doceria-docura/. A fotografia usada no cartão vem da versão do projeto incluída nesta entrega.

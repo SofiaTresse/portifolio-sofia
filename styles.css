@@ -99,3 +99,5 @@ main{overflow-x:clip}
   .navigation nav{display:grid;grid-template-columns:1fr 1fr;gap:14px 20px;text-align:center}
   .navigation .nav-booking{grid-column:1/-1;justify-self:stretch;font-size:19px;min-height:58px}
 }
+/* Projeto Doçura Delícia. */
+.visual-docura{background:#f2d9dd;color:#7b3046}.visual-docura .project-mockup{background:#fffaf3;color:#412e2b}.visual-docura .mockup-nav strong,.visual-docura .mockup-content h3 em,.visual-docura .wide-intro h3 em{color:#7b3046}.visual-docura .mockup-content img{object-position:center 65%}
