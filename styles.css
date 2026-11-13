@@ -78,3 +78,24 @@ main{overflow-x:clip}
 @media(max-width:480px){
   .hero h1{font-size:44px}.hero .eyebrow{font-size:10px;letter-spacing:1px}.hero-description{font-size:18px}.hero-actions{gap:15px;align-items:flex-start;flex-direction:column}.hero-actions .button{width:100%;font-size:17px}.hero-actions .text-link{font-size:17px}.hero-art{height:455px;max-width:calc(100% - 12px)}.hero-browser{top:32px;width:100%}.mini-nav{height:66px;padding-inline:12px}.mini-nav>span{font-size:24px}.preview-booking{font-size:14px;padding:10px 14px}.mini-hero{padding-inline:12px;gap:9px}.mini-hero h2{font-size:27px}.mini-hero small{font-size:8px}.mini-hero p{font-size:10px}.mini-hero>div>span{font-size:9px}.mini-hero img{height:250px}.mini-footer{font-size:7px}.floating-card{bottom:-2px;width:228px;height:120px}.floating-card span{font-size:10px}.butterfly-hero{width:113px;right:-4px;bottom:-2px}.art-note{left:30px}.flower-sticker{width:77px;right:-12px}.project-visual{height:365px;padding-inline:18px}.mockup-content h3,.visual-studio .mockup-content h3{font-size:28px}.mockup-nav{padding-inline:12px}.mockup-nav>small{display:none}.mockup-content{padding-inline:12px}.mockup-content small{font-size:8px}.mockup-button{font-size:9px}.mockup-nav strong>span{font-size:7px}.project-caption h3{font-size:21px}.project-caption p{font-size:16px}.project-open{font-size:16px}.about-copy .text-link{font-size:16px}.contact-panel{padding-inline:18px}.contact-panel h2{font-size:32px}.contact-panel>p:not(.eyebrow){font-size:18px}.contact-panel>p:not(.eyebrow) br{display:none}.contact-panel .whatsapp{font-size:17px;width:100%;padding:17px 12px;gap:8px;border-radius:20px;line-height:1.5}.whatsapp svg{width:26px;height:26px}.whatsapp>span{margin-left:0;flex:none}.contact-number{font-size:23px}.footer{gap:12px}.footer p{font-size:13px;line-height:1.8}.back-top{font-size:14px}
 }
+
+/* Agendamento em destaque na navegação, inclusive no celular. */
+.navigation .nav-booking{display:inline-flex;align-items:center;justify-content:center;gap:12px;min-height:58px;padding:13px 25px;background:#f3bdce;color:#532a3b;border:2px solid #a95877;border-radius:35px;font-size:19px;font-weight:700;box-shadow:0 4px 0 #d998ae;white-space:nowrap;transition:background .2s,transform .2s,box-shadow .2s}
+.navigation .nav-booking svg{width:23px;height:23px;flex:none}
+.navigation .nav-booking:hover,.navigation .nav-booking[aria-current]{background:#edabc2;color:#432131;transform:translateY(-2px);box-shadow:0 6px 0 #d998ae}
+.navigation .nav-booking:focus-visible{outline:3px solid #532a3b;outline-offset:5px}
+@media(max-width:760px){
+  .navigation{height:auto;min-height:88px;flex-wrap:wrap;justify-content:center;gap:16px;padding-block:17px 23px}
+  .navigation nav{width:100%;display:flex;align-items:center;justify-content:center;gap:22px;font-size:16px}
+  .navigation .nav-booking{display:inline-flex;font-size:18px;min-height:54px;padding:11px 18px;gap:9px}
+}
+@media(max-width:400px){
+  .navigation nav{gap:15px;font-size:15px}
+  .navigation .nav-booking{font-size:17px;padding:11px 13px;gap:7px}
+  .navigation .nav-booking svg{width:20px;height:20px}
+}
+/* Espaço para o texto Encomendar no menu móvel. */
+@media(max-width:480px){
+  .navigation nav{display:grid;grid-template-columns:1fr 1fr;gap:14px 20px;text-align:center}
+  .navigation .nav-booking{grid-column:1/-1;justify-self:stretch;font-size:19px;min-height:58px}
+}
