@@ -1,0 +1,311 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="60 140 370 510">
+    <defs>
+      <linearGradient id="vaseGrad" x1="0" y1="0" x2="1" y2="1">
+        <stop offset="0" stop-color="#cf7e57"/>
+        <stop offset=".5" stop-color="#b4552d"/>
+        <stop offset="1" stop-color="#8d3f21"/>
+      </linearGradient>
+      <linearGradient id="paperGrad" x1="0" y1="0" x2=".2" y2="1">
+        <stop offset="0" stop-color="#f2e4d3"/>
+        <stop offset=".55" stop-color="#e6d1bb"/>
+        <stop offset="1" stop-color="#d4b697"/>
+      </linearGradient>
+      <linearGradient id="potGrad" x1="0" y1="0" x2="1" y2="0">
+        <stop offset="0" stop-color="#cf7e57"/>
+        <stop offset=".55" stop-color="#b4552d"/>
+        <stop offset="1" stop-color="#934424"/>
+      </linearGradient>
+      <linearGradient id="boxGrad" x1="0" y1="0" x2="1" y2="0">
+        <stop offset="0" stop-color="#f4e8da"/>
+        <stop offset=".5" stop-color="#fbf4ea"/>
+        <stop offset="1" stop-color="#e8d5c2"/>
+      </linearGradient>
+
+      <!-- Foliagem -->
+      <g id="leaf">
+        <path d="M0 0C10-20 34-34 66-40 56-14 32 2 0 0Z" style="fill:var(--leaf,#2f5a4a)"/>
+        <path d="M6-3C22-14 42-26 58-34" fill="none" style="stroke:var(--leaf-vein,#173a2d)" stroke-width="1.5" stroke-linecap="round" opacity=".5"/>
+      </g>
+
+      <g id="eucalyptus">
+        <path d="M0 0C44-30 28-72 50-102c14-19 24-45 34-78" fill="none" style="stroke:var(--stem,#244b3f)" stroke-width="2.6" stroke-linecap="round"/>
+        <g style="fill:var(--leaf,#2f5a4a)">
+          <ellipse cx="26" cy="-30" rx="9" ry="14" transform="rotate(50 26 -30)"/>
+          <ellipse cx="48" cy="-42" rx="8.5" ry="13" transform="rotate(-50 48 -42)"/>
+          <ellipse cx="34" cy="-64" rx="8.5" ry="13" transform="rotate(46 34 -64)"/>
+          <ellipse cx="58" cy="-76" rx="8" ry="12" transform="rotate(-48 58 -76)"/>
+          <ellipse cx="44" cy="-96" rx="8" ry="12" transform="rotate(44 44 -96)"/>
+          <ellipse cx="66" cy="-110" rx="7.5" ry="11" transform="rotate(-46 66 -110)"/>
+          <ellipse cx="56" cy="-130" rx="7" ry="10.5" transform="rotate(42 56 -130)"/>
+          <ellipse cx="74" cy="-144" rx="6.5" ry="9.5" transform="rotate(-44 74 -144)"/>
+          <ellipse cx="68" cy="-164" rx="6" ry="8.5" transform="rotate(40 68 -164)"/>
+          <ellipse cx="80" cy="-176" rx="5" ry="7" transform="rotate(-42 80 -176)"/>
+        </g>
+      </g>
+
+      <g id="berries">
+        <path d="M0 0C26-32 18-64 30-94 36-110 40-130 44-152" fill="none" style="stroke:var(--stem,#244b3f)" stroke-width="2.4" stroke-linecap="round"/>
+        <g style="fill:var(--berry,#b4552d)">
+          <circle cx="18" cy="-22" r="10"/><circle cx="36" cy="-34" r="8"/>
+          <circle cx="24" cy="-50" r="8.5"/><circle cx="44" cy="-64" r="7.5"/>
+          <circle cx="34" cy="-78" r="7"/><circle cx="52" cy="-92" r="6.5"/>
+          <circle cx="44" cy="-106" r="6"/><circle cx="56" cy="-120" r="5.5"/>
+          <circle cx="50" cy="-136" r="5"/><circle cx="58" cy="-150" r="4.5"/>
+        </g>
+        <g style="fill:var(--berry-light,#d98a68)">
+          <circle cx="15" cy="-19" r="3.4" opacity=".75"/>
+          <circle cx="21" cy="-47" r="3" opacity=".7"/>
+          <circle cx="31" cy="-75" r="2.6" opacity=".65"/>
+          <circle cx="41" cy="-103" r="2.4" opacity=".6"/>
+        </g>
+      </g>
+
+      <!-- Flores -->
+      <g id="rose">
+        <g style="fill:var(--r-mid,#c26a45);stroke:var(--r-line,#7e3519);stroke-width:.8;stroke-opacity:.22">
+          <ellipse cx="0" cy="-22" rx="18" ry="24"/>
+          <ellipse cx="0" cy="-22" rx="18" ry="24" transform="rotate(72)"/>
+          <ellipse cx="0" cy="-22" rx="18" ry="24" transform="rotate(144)"/>
+          <ellipse cx="0" cy="-22" rx="18" ry="24" transform="rotate(216)"/>
+          <ellipse cx="0" cy="-22" rx="18" ry="24" transform="rotate(288)"/>
+        </g>
+        <g style="fill:var(--r-light,#db9273);stroke:var(--r-line,#7e3519);stroke-width:.7;stroke-opacity:.16">
+          <ellipse cx="0" cy="-16" rx="13" ry="18" transform="rotate(36)"/>
+          <ellipse cx="0" cy="-16" rx="13" ry="18" transform="rotate(108)"/>
+          <ellipse cx="0" cy="-16" rx="13" ry="18" transform="rotate(180)"/>
+          <ellipse cx="0" cy="-16" rx="13" ry="18" transform="rotate(252)"/>
+          <ellipse cx="0" cy="-16" rx="13" ry="18" transform="rotate(324)"/>
+        </g>
+        <circle r="10" style="fill:var(--r-dark,#a84e2c)"/>
+        <path d="M0 2c-4-1-6-5-4-8 2-4 8-4 10 0 3 5-1 10-7 10-7 0-11-6-9-12" fill="none" style="stroke:var(--r-line,#7e3519)" stroke-width="1.8" stroke-linecap="round" opacity=".7"/>
+      </g>
+
+      <g id="peony">
+        <g style="fill:var(--p-mid,#d5967d);stroke:var(--p-line,#8f4c36);stroke-width:.7;stroke-opacity:.16">
+          <ellipse cx="0" cy="-27" rx="15" ry="25"/>
+          <ellipse cx="0" cy="-27" rx="15" ry="25" transform="rotate(45)"/>
+          <ellipse cx="0" cy="-27" rx="15" ry="25" transform="rotate(90)"/>
+          <ellipse cx="0" cy="-27" rx="15" ry="25" transform="rotate(135)"/>
+          <ellipse cx="0" cy="-27" rx="15" ry="25" transform="rotate(180)"/>
+          <ellipse cx="0" cy="-27" rx="15" ry="25" transform="rotate(225)"/>
+          <ellipse cx="0" cy="-27" rx="15" ry="25" transform="rotate(270)"/>
+          <ellipse cx="0" cy="-27" rx="15" ry="25" transform="rotate(315)"/>
+        </g>
+        <g style="fill:var(--p-light,#eec3b2);stroke:var(--p-line,#8f4c36);stroke-width:.6;stroke-opacity:.12">
+          <ellipse cx="0" cy="-18" rx="11" ry="17" transform="rotate(30)"/>
+          <ellipse cx="0" cy="-18" rx="11" ry="17" transform="rotate(90)"/>
+          <ellipse cx="0" cy="-18" rx="11" ry="17" transform="rotate(150)"/>
+          <ellipse cx="0" cy="-18" rx="11" ry="17" transform="rotate(210)"/>
+          <ellipse cx="0" cy="-18" rx="11" ry="17" transform="rotate(270)"/>
+          <ellipse cx="0" cy="-18" rx="11" ry="17" transform="rotate(330)"/>
+        </g>
+        <circle r="9" style="fill:var(--p-dark,#b96e51)"/>
+        <circle r="4" style="fill:var(--p-line,#8f4c36)"/>
+      </g>
+
+      <g id="tulip">
+        <path d="M-22-12c0-20 12-28 22-12 10-16 22-8 22 12 0 18-9 30-22 32-13-2-22-14-22-32Z" style="fill:var(--t-mid,#b4552d)"/>
+        <path d="M0-24c10-16 22-8 22 12 0 16-8 27-19 31 4-13 4-28-3-43Z" style="fill:var(--t-light,#d98a68)"/>
+        <path d="M-12-32c-4 12-2 27 5 40" fill="none" style="stroke:var(--t-line,#7e3519)" stroke-width="1.6" stroke-linecap="round" opacity=".45"/>
+      </g>
+
+      <g id="mini">
+        <g style="fill:var(--mini,#f2dfcd)">
+          <circle cx="0" cy="-11" r="6.5"/>
+          <circle cx="0" cy="-11" r="6.5" transform="rotate(72)"/>
+          <circle cx="0" cy="-11" r="6.5" transform="rotate(144)"/>
+          <circle cx="0" cy="-11" r="6.5" transform="rotate(216)"/>
+          <circle cx="0" cy="-11" r="6.5" transform="rotate(288)"/>
+        </g>
+        <circle r="4" style="fill:var(--mini-center,#c9a46b)"/>
+      </g>
+
+      <!-- Composições -->
+      <g id="arrangement">
+        <ellipse cx="240" cy="606" rx="94" ry="13" fill="#183229" opacity=".16"/>
+        <use href="#eucalyptus" transform="translate(206 508) rotate(-24) scale(1.15)" style="--leaf:#2c5343;--stem:#214337"/>
+        <use href="#eucalyptus" transform="translate(286 506) rotate(18) scale(1.05)" style="--leaf:#3a6753"/>
+        <use href="#eucalyptus" transform="translate(232 500) rotate(-58) scale(.85)" style="--leaf:#39614f"/>
+        <use href="#berries" transform="translate(314 500) rotate(10) scale(.9)"/>
+        <use href="#berries" transform="translate(176 502) rotate(-6) scale(.8)" style="--berry:#c9a46b;--berry-light:#e9d3ad"/>
+        <g fill="none" stroke="#244b3f" stroke-linecap="round">
+          <path d="M240 516C230 436 198 362 158 296" stroke-width="4.5"/>
+          <path d="M240 516C242 414 236 310 252 208" stroke-width="4.5"/>
+          <path d="M240 516C250 420 296 338 342 276" stroke-width="4.5"/>
+          <path d="M240 516C226 446 190 414 146 398" stroke-width="3.6"/>
+          <path d="M240 516C258 448 304 402 350 392" stroke-width="3.6"/>
+          <path d="M240 516C236 462 240 432 242 398" stroke-width="3.6"/>
+        </g>
+        <use href="#leaf" transform="translate(228 474) rotate(-120)"/>
+        <use href="#leaf" transform="translate(254 470) rotate(58) scale(.85)" style="--leaf:#37604e"/>
+        <use href="#leaf" transform="translate(216 432) rotate(-152) scale(.8)" style="--leaf:#2a4f40"/>
+        <use href="#leaf" transform="translate(278 426) rotate(16) scale(.8)"/>
+        <use href="#leaf" transform="translate(196 386) rotate(-118) scale(.85)" style="--leaf:#37604e"/>
+        <use href="#leaf" transform="translate(306 372) rotate(42) scale(.8)"/>
+        <use href="#leaf" transform="translate(262 324) rotate(-66) scale(.7)" style="--leaf:#2a4f40"/>
+        <use href="#leaf" transform="translate(160 336) rotate(-160) scale(.6)" style="--leaf:#37604e"/>
+        <path d="M188 508c0 18-13 28-17 48-6 30 8 58 42 64h54c34-6 48-34 42-64-4-20-17-30-17-48z" fill="url(#vaseGrad)"/>
+        <ellipse cx="240" cy="508" rx="52" ry="12" fill="#8d3f21"/>
+        <ellipse cx="240" cy="507" rx="41" ry="8" fill="#5a2814"/>
+        <path d="M176 578c42 12 86 12 128 0" fill="none" stroke="#dcb98c" stroke-width="2" opacity=".7"/>
+        <g fill="none" stroke="#6f2f17" stroke-width="2" opacity=".2">
+          <path d="M206 516c-5 34-2 72 8 98"/>
+          <path d="M226 520c-2 34 0 70 5 98"/>
+          <path d="M258 520c2 34 0 70-5 98"/>
+          <path d="M278 516c5 34 2 72-8 98"/>
+        </g>
+        <path d="M200 524c-4 28-6 58 2 86" fill="none" stroke="#f0c7ad" stroke-width="3" opacity=".45" stroke-linecap="round"/>
+        <use href="#rose" transform="translate(280 232) scale(1.05)" style="--r-mid:#d5917a;--r-light:#eec2b0;--r-dark:#b96649;--r-line:#8d4a35"/>
+        <use href="#mini" transform="translate(205 206) scale(.85)" style="--mini:#f2dfcd;--mini-center:#c9a46b"/>
+        <use href="#mini" transform="translate(345 244) scale(.7)" style="--mini:#e6c3a4;--mini-center:#a84e2c"/>
+        <use href="#rose" transform="translate(168 300) scale(1.25)"/>
+        <use href="#peony" transform="translate(268 332) scale(1.3)" style="--p-mid:#d9a08a;--p-light:#f0cdbd;--p-dark:#b96e51;--p-line:#8f4c36"/>
+        <use href="#rose" transform="translate(154 404) scale(.82)" style="--r-mid:#e3c1a3;--r-light:#f4e2d2;--r-dark:#cda07f;--r-line:#a77a59"/>
+        <use href="#tulip" transform="translate(338 346) scale(.95)"/>
+        <use href="#tulip" transform="translate(214 438) scale(.62)" style="--t-mid:#d58f76;--t-light:#eec2b0;--t-line:#9a563d"/>
+        <use href="#mini" transform="translate(330 416) scale(.66)" style="--mini:#f2dfcd;--mini-center:#c9a46b"/>
+        <use href="#mini" transform="translate(122 340) scale(.6)" style="--mini:#d9a08a;--mini-center:#8f3f21"/>
+        <use href="#mini" transform="translate(246 448) scale(.55)" style="--mini:#e6c3a4;--mini-center:#a84e2c"/>
+        <use href="#leaf" transform="translate(232 488) rotate(-52) scale(.75)"/>
+        <use href="#leaf" transform="translate(262 486) rotate(50) scale(.7)" style="--leaf:#37604e"/>
+        <use href="#leaf" transform="translate(292 462) rotate(28) scale(.6)" style="--leaf:#2a4f40"/>
+      </g>
+
+      <g id="wrapped">
+        <ellipse cx="210" cy="518" rx="92" ry="12" fill="#183229" opacity=".14"/>
+        <use href="#eucalyptus" transform="translate(166 464) rotate(-32) scale(1)" style="--leaf:#2c5343"/>
+        <use href="#eucalyptus" transform="translate(258 464) rotate(22) scale(.95)" style="--leaf:#39614f"/>
+        <use href="#berries" transform="translate(292 456) rotate(12) scale(.8)"/>
+        <g fill="none" stroke="#244b3f" stroke-linecap="round" stroke-width="3.6">
+          <path d="M210 436C196 372 164 300 148 236"/>
+          <path d="M210 436C212 366 212 286 218 200"/>
+          <path d="M210 436C226 372 260 314 288 252"/>
+          <path d="M210 436C200 386 184 330 180 292"/>
+          <path d="M210 436C224 390 250 344 300 316"/>
+        </g>
+        <use href="#leaf" transform="translate(196 372) rotate(-148) scale(.7)"/>
+        <use href="#leaf" transform="translate(232 356) rotate(34) scale(.66)" style="--leaf:#37604e"/>
+        <path d="M116 300c42 28 146 28 188 0l-38 196c-6 16-106 16-112 0z" fill="url(#paperGrad)" stroke="#d3b493" stroke-width="1"/>
+        <path d="M210 316v182" stroke="#c9ad8e" stroke-width="1.4" opacity=".6"/>
+        <path d="M164 312l-26 172M256 312l26 172" stroke="#c9ad8e" stroke-width="1.4" opacity=".5"/>
+        <path d="M120 304c40 26 140 26 180 0" fill="none" stroke="#b9926d" stroke-width="1.6" opacity=".5"/>
+        <use href="#leaf" transform="translate(140 320) rotate(-118) scale(.75)"/>
+        <use href="#leaf" transform="translate(278 316) rotate(44) scale(.75)" style="--leaf:#37604e"/>
+        <path d="M150 410c40 12 80 12 120 0l-5 24c-36 10-74 10-110 0z" fill="#f7efe3" stroke="#dcc6ad" stroke-width="1"/>
+        <path d="M210 424c-20-16-38-9-32 5 5 11 22 10 32-5z" fill="#f7efe3" stroke="#dcc6ad" stroke-width="1.2"/>
+        <path d="M210 424c20-16 38-9 32 5-5 11-22 10-32-5z" fill="#f7efe3" stroke="#dcc6ad" stroke-width="1.2"/>
+        <path d="M206 430c-4 18-12 30-22 38M214 430c4 18 12 30 22 38" fill="none" stroke="#e5d2bb" stroke-width="3" opacity=".8"/>
+        <circle cx="210" cy="426" r="4" fill="#d8bfa4"/>
+        <use href="#peony" transform="translate(222 196) scale(1.15)" style="--p-mid:#d9a08a;--p-light:#f0cdbd;--p-dark:#b96e51;--p-line:#8f4c36"/>
+        <use href="#rose" transform="translate(150 230) scale(1.02)"/>
+        <use href="#rose" transform="translate(286 234) scale(.9)" style="--r-mid:#d5917a;--r-light:#eec2b0;--r-dark:#b96649;--r-line:#8d4a35"/>
+        <use href="#tulip" transform="translate(194 284) scale(.85)"/>
+        <use href="#mini" transform="translate(322 284) scale(.6)" style="--mini:#f2dfcd;--mini-center:#c9a46b"/>
+        <use href="#mini" transform="translate(112 274) scale(.5)" style="--mini:#e6c3a4;--mini-center:#a84e2c"/>
+        <use href="#mini" transform="translate(174 190) scale(.5)" style="--mini:#f2dfcd;--mini-center:#c9a46b"/>
+        <use href="#leaf" transform="translate(244 288) rotate(-62) scale(.8)" style="--leaf:#2a4f40"/>
+      </g>
+
+      <g id="planted">
+        <ellipse cx="180" cy="418" rx="82" ry="11" fill="#183229" opacity=".14"/>
+        <use href="#leaf" transform="translate(176 316) rotate(-118) scale(1.9)"/>
+        <use href="#leaf" transform="translate(184 316) rotate(-82) scale(2.2)" style="--leaf:#37604e"/>
+        <use href="#leaf" transform="translate(180 314) rotate(-46) scale(1.85)" style="--leaf:#2a4f40"/>
+        <use href="#leaf" transform="translate(172 318) rotate(-146) scale(1.5)" style="--leaf:#426c58"/>
+        <use href="#leaf" transform="translate(188 318) rotate(-14) scale(1.7)" style="--leaf:#335b4a"/>
+        <use href="#leaf" transform="translate(178 302) rotate(-100) scale(1.35)" style="--leaf:#4a7460"/>
+        <use href="#leaf" transform="translate(184 286) rotate(-58) scale(1.15)" style="--leaf:#37604e"/>
+        <path d="M112 330h136l-14 72c-2 10-18 15-54 15s-52-5-54-15z" fill="url(#potGrad)"/>
+        <ellipse cx="180" cy="330" rx="66" ry="14" fill="#5a2814"/>
+        <rect x="102" y="314" width="156" height="26" rx="10" fill="#b4552d"/>
+        <ellipse cx="180" cy="314" rx="70" ry="13" fill="#c26a45"/>
+        <ellipse cx="180" cy="314" rx="60" ry="9" fill="#4a3528"/>
+        <path d="M128 344c18 8 86 8 104 0" fill="none" stroke="#e4b89f" stroke-width="2" opacity=".5"/>
+        <path d="M150 400h60" stroke="#f0c7ad" stroke-width="3" opacity=".3" stroke-linecap="round"/>
+        <path d="M126 330c-14 22-20 44-14 62 5 15 20 20 30 12" fill="none" stroke="#2f5a4a" stroke-width="2.4" stroke-linecap="round"/>
+        <g fill="#37604e">
+          <ellipse cx="116" cy="352" rx="8" ry="5" transform="rotate(-62 116 352)"/>
+          <ellipse cx="112" cy="374" rx="7.5" ry="4.6" transform="rotate(-70 112 374)"/>
+          <ellipse cx="118" cy="394" rx="7" ry="4.2" transform="rotate(-52 118 394)"/>
+          <ellipse cx="132" cy="406" rx="6" ry="3.8" transform="rotate(-38 132 406)"/>
+        </g>
+      </g>
+
+      <g id="gift">
+        <ellipse cx="190" cy="362" rx="92" ry="12" fill="#183229" opacity=".14"/>
+        <use href="#eucalyptus" transform="translate(238 286) rotate(28) scale(.65)" style="--leaf:#2c5343"/>
+        <use href="#leaf" transform="translate(150 286) rotate(-108) scale(.8)"/>
+        <use href="#leaf" transform="translate(248 278) rotate(-38) scale(.7)" style="--leaf:#37604e"/>
+        <path d="M104 298v42c0 13 39 22 86 22s86-9 86-22v-42z" fill="url(#boxGrad)"/>
+        <ellipse cx="190" cy="340" rx="86" ry="19" fill="#ecdac6"/>
+        <path d="M104 330c0 13 39 22 86 22s86-9 86-22" fill="none" stroke="#d8bea4" stroke-width="1.4"/>
+        <path d="M176 298h28v66c0 5-28 5-28 0z" fill="#f6ead9" opacity=".95"/>
+        <path d="M96 286v20c0 13 42 22 94 22s94-9 94-22v-20z" fill="#b4552d"/>
+        <ellipse cx="190" cy="286" rx="94" ry="23" fill="#c26a45"/>
+        <ellipse cx="190" cy="286" rx="84" ry="18" fill="#d08560" opacity=".55"/>
+        <path d="M176 286h28v22c0 5-28 5-28 0z" fill="#f6ead9"/>
+        <use href="#peony" transform="translate(162 228) scale(1)" style="--p-mid:#d9a08a;--p-light:#f0cdbd;--p-dark:#b96e51;--p-line:#8f4c36"/>
+        <use href="#rose" transform="translate(232 220) scale(.85)"/>
+        <use href="#mini" transform="translate(196 190) scale(.55)" style="--mini:#f2dfcd;--mini-center:#c9a46b"/>
+        <use href="#mini" transform="translate(274 250) scale(.5)" style="--mini:#e6c3a4;--mini-center:#a84e2c"/>
+        <use href="#leaf" transform="translate(206 270) rotate(-45) scale(.6)" style="--leaf:#37604e"/>
+        <path d="M190 274c-24-18-44-10-37 5 6 13 26 12 37-5z" fill="#f8f0e4" stroke="#ddc8af" stroke-width="1.2"/>
+        <path d="M190 274c24-18 44-10 37 5-6 13-26 12-37-5z" fill="#f8f0e4" stroke="#ddc8af" stroke-width="1.2"/>
+        <circle cx="190" cy="277" r="5" fill="#d9bfa5"/>
+        <path d="M186 282c-4 16-10 26-18 33M194 282c4 16 10 26 18 33" fill="none" stroke="#f3e6d6" stroke-width="3" opacity=".9"/>
+      </g>
+
+      <g id="single">
+        <use href="#eucalyptus" transform="translate(96 286) rotate(-12) scale(1.15)"/>
+        <use href="#eucalyptus" transform="translate(168 286) rotate(20) scale(1)" style="--leaf:#37604e"/>
+        <use href="#berries" transform="translate(176 270) rotate(16) scale(.75)"/>
+        <use href="#leaf" transform="translate(128 276) rotate(-120) scale(1.05)"/>
+        <use href="#leaf" transform="translate(148 282) rotate(40) scale(.95)" style="--leaf:#37604e"/>
+        <use href="#peony" transform="translate(130 168) scale(1.55)" style="--p-mid:#d9a08a;--p-light:#f2d2c3;--p-dark:#b96e51;--p-line:#8f4c36"/>
+        <use href="#mini" transform="translate(190 108) scale(.6)" style="--mini:#f2dfcd;--mini-center:#c9a46b"/>
+        <use href="#leaf" transform="translate(188 200) rotate(-15) scale(.8)"/>
+      </g>
+
+      <g id="sprig">
+        <use href="#eucalyptus" transform="translate(120 292) rotate(-6) scale(1.55)"/>
+        <use href="#leaf" transform="translate(138 288) rotate(-52) scale(1.2)" style="--leaf:#37604e"/>
+        <use href="#leaf" transform="translate(112 276) rotate(20) scale(1.05)"/>
+        <use href="#berries" transform="translate(112 292) rotate(4) scale(1.05)"/>
+        <use href="#mini" transform="translate(96 190) scale(.55)" style="--mini:#e6c3a4;--mini-center:#a84e2c"/>
+        <use href="#rose" transform="translate(180 120) scale(.72)" style="--r-mid:#d5927a;--r-light:#efc6b5;--r-dark:#b96a4b;--r-line:#8d4a35"/>
+      </g>
+
+      <!-- Ícones -->
+      <g id="monogram">
+        <g style="fill:currentColor">
+          <circle cx="24" cy="13" r="7"/>
+          <circle cx="24" cy="13" r="7" transform="rotate(72 24 24)"/>
+          <circle cx="24" cy="13" r="7" transform="rotate(144 24 24)"/>
+          <circle cx="24" cy="13" r="7" transform="rotate(216 24 24)"/>
+          <circle cx="24" cy="13" r="7" transform="rotate(288 24 24)"/>
+        </g>
+        <circle cx="24" cy="24" r="4.5" fill="#c9a46b"/>
+      </g>
+
+      <g id="icon-spark">
+        <path d="M12 2c.4 5.4 4.6 9.6 10 10-5.4.4-9.6 4.6-10 10-.4-5.4-4.6-9.6-10-10 5.4-.4 9.6-4.6 10-10Z" fill="currentColor"/>
+      </g>
+      <g id="icon-arrow">
+        <path d="M4.5 12h14M12.5 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+      </g>
+      <g id="icon-star">
+        <path d="m12 2.8 2.8 5.9 6.4.8-4.7 4.4 1.3 6.3L12 17.1l-5.8 3.1 1.3-6.3L2.8 9.5l6.4-.8Z" fill="currentColor"/>
+      </g>
+      <g id="icon-whatsapp">
+        <path d="M12 2.8a9.2 9.2 0 0 0-7.9 13.9L2.8 21.2l4.7-1.3A9.2 9.2 0 1 0 12 2.8Z" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/>
+        <g transform="translate(5.3 5.1) scale(.56)">
+          <path d="M6.6 3.5c.5 0 .9.3 1.1.8l1.2 2.9c.2.4.1.9-.2 1.2L7.5 9.6a14.3 14.3 0 0 0 6.9 6.9l1.2-1.2c.3-.3.8-.4 1.2-.2l2.9 1.2c.5.2.8.6.8 1.1v2.7c0 .8-.7 1.5-1.5 1.4C10.9 20.8 3.2 13.1 2.5 5c-.1-.8.6-1.5 1.4-1.5z" fill="none" stroke="currentColor" stroke-width="2.8" stroke-linejoin="round"/>
+        </g>
+      </g>
+      <g id="icon-instagram">
+        <rect x="3" y="3" width="18" height="18" rx="5" fill="none" stroke="currentColor" stroke-width="1.7"/>
+        <circle cx="12" cy="12" r="4" fill="none" stroke="currentColor" stroke-width="1.7"/>
+        <circle cx="17" cy="7" r="1.2" fill="currentColor"/>
+      </g>
+    </defs>
+  <use href="#arrangement"/></svg>
