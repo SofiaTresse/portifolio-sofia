@@ -81,5 +81,77 @@
     <section class="contact container section" id="contato" aria-labelledby="contact-title"><div class="contact-panel"><p class="eyebrow">03 / O PRÓXIMO PROJETO PODE SER O SEU</p><h2 id="contact-title">Sua ideia + meu cuidado.<br><em>Vamos criar algo lindo?</em></h2><p>Me conte o que você imagina para o seu site. <br>Nossa conversa começa com um oi no WhatsApp.</p><a class="button button-dark whatsapp" href="https://wa.me/5534991077749?text=Oi%2C%20Sofia%21%20Adorei%20seu%20trabalho%20e%20gostaria%20de%20encomendar%20um%20site%20com%20voc%C3%AA.%20Podemos%20conversar%20sobre%20a%20minha%20ideia%3F" target="_self" rel="noopener noreferrer"><svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M20 11.7a8 8 0 0 1-11.9 7L4 20l1.2-4A8 8 0 1 1 20 11.7Z" stroke="currentColor" stroke-width="1.6"/><path d="M9 8c-1 0-1 2 1 4s4 3 5 2l.5-1-2-1-1 1c-1-.3-2.5-1.8-2.8-2.8l.8-.7L9.7 8Z" fill="currentColor"/></svg>Quero encomendar um site <span aria-hidden="true">↗</span></a><a class="contact-number" href="https://wa.me/5534991077749?text=Oi%2C%20Sofia%21%20Adorei%20seu%20trabalho%20e%20gostaria%20de%20encomendar%20um%20site%20com%20voc%C3%AA.%20Podemos%20conversar%20sobre%20a%20minha%20ideia%3F" target="_self" rel="noopener noreferrer">(34) 99107-7749</a><img class="contact-flower flower-left" src="assets/flor.svg" width="150" height="150" alt=""><img class="contact-flower flower-right" src="assets/flor.svg" width="105" height="105" alt=""><img class="butterfly butterfly-contact" src="assets/borboleta.svg" width="150" height="122" alt="" aria-hidden="true"><span class="contact-spark" aria-hidden="true">✧</span></div></section>
   </main>
   <footer class="footer container"><a class="brand" href="#inicio"><img src="assets/flor.svg" width="28" height="28" alt=""><span>sofia.</span></a><p>© <span id="year">2026</span> Sofia Tresse. Feito com cuidado e criatividade.</p><a class="back-top" href="#inicio">Voltar ao topo <span aria-hidden="true">↑</span></a></footer>
+<style>
+#wa-help{max-width:440px;width:calc(100% - 32px);border:0;border-radius:20px;padding:26px;background:#fffaf3;color:#302923;box-shadow:0 16px 60px #0004}
+#wa-help::backdrop{background:#0007}#wa-help h2{font:700 24px/1.25 sans-serif;margin:0 0 14px}#wa-help p{font:16px/1.5 sans-serif;margin:12px 0}#wa-help a,#wa-help button{display:block;width:100%;box-sizing:border-box;margin:12px 0;padding:13px;border-radius:10px;font:600 16px/1.3 sans-serif;text-align:center;cursor:pointer}#wa-help a{background:#244c39;color:white;text-decoration:none}#wa-help button{background:white;color:#302923;border:1px solid #c8b9aa}#wa-help textarea{box-sizing:border-box;width:100%;min-height:130px;padding:12px;font:15px/1.4 sans-serif}#wa-close{width:auto!important;margin-left:auto!important}
+</style>
+<dialog id="wa-help" aria-labelledby="wa-heading">
+  <button type="button" id="wa-close" aria-label="Fechar">Fechar ×</button>
+  <h2 id="wa-heading">Vamos conversar</h2>
+  <p>Se o WhatsApp não abriu, use uma das opções abaixo. Sua mensagem continua aqui.</p>
+  <a id="wa-retry" href="https://wa.me/5534991077749">Abrir pelo link do WhatsApp</a>
+  <label for="wa-message">Sua mensagem</label>
+  <textarea id="wa-message" readonly></textarea>
+  <button type="button" id="wa-copy">Copiar mensagem</button>
+  <p id="wa-status" role="status" aria-live="polite"></p>
+  <p>Você também pode adicionar <strong>(34) 99107-7749</strong> aos seus contatos e colar a mensagem no WhatsApp.</p>
+  <a href="tel:+5534991077749">Ligar para Sofia</a>
+</dialog>
+<script>
+(() => {
+  'use strict';
+  const dialog = document.getElementById('wa-help');
+  const message = document.getElementById('wa-message');
+  const retry = document.getElementById('wa-retry');
+  const status = document.getElementById('wa-status');
+  const contactLinks = [...document.querySelectorAll('a[href^="https://wa.me/5534991077749"]')].filter(link => link !== retry);
+  let currentUrl = contactLinks[0]?.href;
+  if (!currentUrl) return;
+  function showHelp(url) {
+    currentUrl = url;
+    const parsed = new URL(url);
+    message.value = parsed.searchParams.get('text') || '';
+    retry.href = url;
+    status.textContent = '';
+    if (!dialog.open) dialog.showModal();
+  }
+  contactLinks.forEach(link => {
+    link.removeAttribute('target');
+    link.addEventListener('click', event => {
+      if (event.ctrlKey || event.metaKey || event.shiftKey || event.altKey || event.button !== 0) return;
+      event.preventDefault();
+      showHelp(link.href);
+      if (/Android/i.test(navigator.userAgent)) {
+        const parsed = new URL(link.href);
+        const query = new URLSearchParams({phone:parsed.pathname.slice(1),text:message.value});
+        const fallback = new URL(location.href);
+        fallback.hash = 'whatsapp-ajuda';
+        // Sem pacote fixo: permite que o Android escolha entre apps compatíveis.
+        // Se não houver app, o Chrome retorna ao próprio site, sem abrir a loja.
+        location.href = `intent://send?${query.toString()}#Intent;scheme=whatsapp;S.browser_fallback_url=${encodeURIComponent(fallback.href)};end`;
+      } else {
+        location.href = link.href;
+      }
+    });
+  });
+  document.getElementById('wa-close').addEventListener('click', () => dialog.close());
+  document.getElementById('wa-copy').addEventListener('click', async () => {
+    try {
+      await navigator.clipboard.writeText(message.value);
+      status.textContent = 'Mensagem copiada. Cole na conversa com Sofia.';
+    } catch {
+      message.focus();
+      message.select();
+      status.textContent = 'Selecione e copie o texto acima para colar na conversa.';
+    }
+  });
+  if (location.hash === '#whatsapp-ajuda') showHelp(currentUrl);
+  window.addEventListener('hashchange', () => {
+    if (location.hash === '#whatsapp-ajuda') showHelp(currentUrl);
+  });
+})();
+</script>
+
 </body>
 </html>
+
